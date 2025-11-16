@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  @apply bg-ivory text-night;
+}
+
+* {
+  @apply box-border;
+}
+
+body {
+  @apply min-h-screen bg-gradient-to-b from-night to-obsidian text-ivory font-sans antialiased;
+}
+
+html[data-theme="light"] body {
+  @apply bg-ivory text-night;
+}
+
+::selection {
+  @apply bg-platinum/70 text-night;
+}
+
+.glass-panel {
+  @apply bg-card-glass backdrop-blur-xl border border-white/10 rounded-2xl shadow-glow;
+}
+
+.hero-text {
+  @apply font-display tracking-tight;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-widest text-platinum/90;
+}
+
+.section-title {
+  @apply hero-text text-3xl leading-tight text-ivory md:text-4xl;
+}
+
+.section-subtitle {
+  @apply text-platinum/80 text-base md:text-lg max-w-3xl;
+}
